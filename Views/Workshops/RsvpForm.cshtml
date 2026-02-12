@@ -1,0 +1,38 @@
+﻿@model Lab3_WorkshopRSVP.Models.Rsvp
+
+@{
+    ViewData["Title"] = "RSVP Form";
+}
+
+<div class="container mt-4">
+    <h1>RSVP Form</h1>
+
+    <form asp-controller="Workshops" asp-action="Confirm" method="post" class="mt-3">
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            <label asp-for="FullName" class="form-label">Full Name</label>
+            <input asp-for="FullName" class="form-control" placeholder="Enter your full name" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="WorkshopTitle" class="form-label">Workshop</label>
+            <select asp-for="WorkshopTitle" class="form-select">
+                <option value="">-- Select a workshop --</option>
+                <option value="Routing Basics">Routing Basics</option>
+                <option value="EF Core Intro">EF Core Intro</option>
+                <option value="Razor Essentials">Razor Essentials</option>
+            </select>
+        </div>
+
+        <div class="form-check mb-3">
+            <input asp-for="NeedsAccommodation" class="form-check-input" />
+            <label asp-for="NeedsAccommodation" class="form-check-label">
+                I need accommodation
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit RSVP</button>
+        <a class="btn btn-link" asp-controller="Workshops" asp-action="Index">Back</a>
+    </form>
+</div>

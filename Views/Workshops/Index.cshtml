@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Workshops";
+}
+
+<div class="container mt-4">
+    <h1>Workshop RSVP</h1>
+    <p class="lead">
+        Register for a workshop and view all registrations.
+    </p>
+
+    <div class="mt-3">
+        <a class="btn btn-primary me-2" asp-controller="Workshops" asp-action="RsvpForm">Register (RSVP Form)</a>
+        <a class="btn btn-outline-secondary" asp-controller="Workshops" asp-action="Registrations">View Registrations</a>
+    </div>
+</div>

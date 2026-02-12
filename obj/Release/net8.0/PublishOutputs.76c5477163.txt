@@ -1,0 +1,7 @@
+C:\Users\ravij\.net\Lab3_WorkshopRSVP\Lab3_WorkshopRSVP\obj\Release\net8.0\PubTmp\Out\Lab3_WorkshopRSVP.exe
+C:\Users\ravij\.net\Lab3_WorkshopRSVP\Lab3_WorkshopRSVP\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\ravij\.net\Lab3_WorkshopRSVP\Lab3_WorkshopRSVP\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\ravij\.net\Lab3_WorkshopRSVP\Lab3_WorkshopRSVP\obj\Release\net8.0\PubTmp\Out\Lab3_WorkshopRSVP.dll
+C:\Users\ravij\.net\Lab3_WorkshopRSVP\Lab3_WorkshopRSVP\obj\Release\net8.0\PubTmp\Out\Lab3_WorkshopRSVP.deps.json
+C:\Users\ravij\.net\Lab3_WorkshopRSVP\Lab3_WorkshopRSVP\obj\Release\net8.0\PubTmp\Out\Lab3_WorkshopRSVP.runtimeconfig.json
+C:\Users\ravij\.net\Lab3_WorkshopRSVP\Lab3_WorkshopRSVP\obj\Release\net8.0\PubTmp\Out\Lab3_WorkshopRSVP.pdb
