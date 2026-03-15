@@ -2,6 +2,9 @@
 {
     public class Rsvp
     {
+        // Primary key for EF Core
+        public int Id { get; set; }
+
         public string FullName { get; set; } = string.Empty;
 
         // checkbox in the form

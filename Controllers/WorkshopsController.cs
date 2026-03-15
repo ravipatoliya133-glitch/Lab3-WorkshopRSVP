@@ -1,12 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Lab3_WorkshopRSVP.Models;
+using Lab3_WorkshopRSVP.Data;
+using System.Linq;
 
 namespace Lab3_WorkshopRSVP.Controllers
 {
     public class WorkshopsController : Controller
     {
-        // In-memory list of registrations (static so it persists while the app is running)
-        private static readonly List<Rsvp> _registrations = new List<Rsvp>();
+        private readonly ApplicationDbContext _context;
+
+        public WorkshopsController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
         // GET: /Workshops
         public IActionResult Index()
@@ -26,27 +32,24 @@ namespace Lab3_WorkshopRSVP.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Confirm(Rsvp model)
         {
-            // Simple validation (optional but helps avoid blank submissions)
+            // Simple validation
             if (string.IsNullOrWhiteSpace(model.FullName) || string.IsNullOrWhiteSpace(model.WorkshopTitle))
             {
                 ModelState.AddModelError("", "Please enter your name and select a workshop.");
                 return View("RsvpForm", model);
             }
 
-            // Save to in-memory list
-            _registrations.Add(model);
-
-            // Required ViewData message
+            // For Lab 4, form submissions do not need to be saved to DB yet
             ViewData["Message"] = $"Thanks for registering, {model.FullName}!";
 
-            // Required: strongly typed view with View(model)
             return View(model);
         }
 
         // GET: /Workshops/Registrations
         public IActionResult Registrations()
         {
-            return View(_registrations);
+            var registrations = _context.Rsvps.ToList();
+            return View(registrations);
         }
     }
 }
